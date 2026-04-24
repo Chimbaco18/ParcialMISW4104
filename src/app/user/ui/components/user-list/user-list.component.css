@@ -1,0 +1,27 @@
+/* Para que las fotos no se deformen */
+.rounded-circle {
+  object-fit: cover;
+}
+
+/* Efecto al pasar el mouse por las tarjetas */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Panel de detalle fijo a la derecha */
+.sticky-panel {
+  position: sticky;
+  top: 20px;
+}
+
+/* Contenedor de la lista con scroll independiente (opcional) */
+.user-list-container {
+  max-height: 85vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
