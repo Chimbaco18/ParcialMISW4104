@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto; 
+}
+
+.main-header {
+  background-color: #f0f7ff !important; 
+  border-bottom: 1px solid #d1e3f8 !important
+}
+
+.main-footer {
+  flex-shrink: 0; 
+  background-color: #f0f7ff !important;
+  border-top: 1px solid #d1e3f8 !important;
+}
+
+.nav-link-active {
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: "";
+  position: absolute;
+  bottom: -14px; 
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0d6efd;
+  border-radius: 3px 3px 0 0;
+}
+
+.bg-light {
+  background-color: #f9fafc !important;
+}

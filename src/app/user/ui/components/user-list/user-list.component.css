@@ -1,27 +1,155 @@
-/* Para que las fotos no se deformen */
-.rounded-circle {
-  object-fit: cover;
+/* --- Estructura Principal del Dashboard --- */
+.dashboard-container {
+  display: flex;
+  /* Ajusta la altura restando el Header y Footer (aprox 140px total) */
+  height: calc(100vh - 140px); 
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
-/* Efecto al pasar el mouse por las tarjetas */
-.card {
-  transition: transform 0.2s, box-shadow 0.2s;
+/* --- Sidebar (Lista de Usuarios) --- */
+.sidebar {
+  width: 380px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
-}
-
-/* Panel de detalle fijo a la derecha */
-.sticky-panel {
-  position: sticky;
-  top: 20px;
-}
-
-/* Contenedor de la lista con scroll independiente (opcional) */
-.user-list-container {
-  max-height: 85vh;
+.user-list-scroll {
   overflow-y: auto;
-  padding-right: 10px;
+  flex-grow: 1;
+}
+
+.user-item {
+  transition: all 0.2s ease;
+  background-color: transparent;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+}
+
+.user-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Estado activo cuando seleccionas un usuario */
+.active-user {
+  background-color: #f0f4ff !important;
+  border-left-color: #0d6efd !important;
+}
+
+.active-user i {
+  display: block !important;
+}
+
+/* --- Área de Detalle (Derecha) --- */
+.detail-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #f9fafc; /* Gris muy suave como el mockup */
+}
+
+/* --- Tarjetas (Cards) --- */
+.rounded-4 {
+  border-radius: 1.25rem !important;
+}
+
+.card {
+  border: none;
+}
+
+/* --- Elementos del Perfil --- */
+.verified-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  line-height: 1;
+  font-size: 1.2rem;
+}
+
+/* Badges estilo "Pill" (Ubicación, Rol, Email) */
+.badge-pill {
+  background-color: #f1f4f8;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* --- Sección de Repositorios --- */
+.repo-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.repo-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f7ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Contenedor gris para el estado vacío (No Repos) */
+.icon-box-gray {
+  width: 64px;
+  height: 64px;
+  background-color: #f1f3f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Utilidades y Tipografía --- */
+.text-uppercase {
+  letter-spacing: 1px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* --- Personalización de Scrollbars (Para que se vea Pro) --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e0;
+}
+
+/* Ajustes de botones */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-outline-light {
+  border-color: #e2e8f0 !important;
+  color: #4a5568 !important;
 }
