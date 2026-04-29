@@ -1,13 +1,10 @@
-/* --- Estructura Principal del Dashboard --- */
 .dashboard-container {
   display: flex;
-  /* Ajusta la altura restando el Header y Footer (aprox 140px total) */
   height: calc(100vh - 140px); 
   overflow: hidden;
   background-color: #ffffff;
 }
 
-/* --- Sidebar (Lista de Usuarios) --- */
 .sidebar {
   width: 380px;
   flex-shrink: 0;
@@ -32,7 +29,6 @@
   background-color: #f8f9fa;
 }
 
-/* Estado activo cuando seleccionas un usuario */
 .active-user {
   background-color: #f0f4ff !important;
   border-left-color: #0d6efd !important;
@@ -42,14 +38,12 @@
   display: block !important;
 }
 
-/* --- Área de Detalle (Derecha) --- */
 .detail-content {
   flex-grow: 1;
   overflow-y: auto;
-  background-color: #f9fafc; /* Gris muy suave como el mockup */
+  background-color: #f9fafc; 
 }
 
-/* --- Tarjetas (Cards) --- */
 .rounded-4 {
   border-radius: 1.25rem !important;
 }
@@ -58,7 +52,6 @@
   border: none;
 }
 
-/* --- Elementos del Perfil --- */
 .verified-badge {
   position: absolute;
   bottom: 5px;
@@ -70,7 +63,6 @@
   font-size: 1.2rem;
 }
 
-/* Badges estilo "Pill" (Ubicación, Rol, Email) */
 .badge-pill {
   background-color: #f1f4f8;
   padding: 8px 18px;
@@ -83,7 +75,6 @@
   font-weight: 500;
 }
 
-/* --- Sección de Repositorios --- */
 .repo-list {
   max-height: 400px;
   overflow-y: auto;
@@ -100,7 +91,6 @@
   font-size: 1.2rem;
 }
 
-/* Contenedor gris para el estado vacío (No Repos) */
 .icon-box-gray {
   width: 64px;
   height: 64px;
@@ -111,7 +101,6 @@
   justify-content: center;
 }
 
-/* --- Utilidades y Tipografía --- */
 .text-uppercase {
   letter-spacing: 1px;
 }
@@ -124,7 +113,6 @@
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-/* --- Personalización de Scrollbars (Para que se vea Pro) --- */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -140,13 +128,6 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #cbd5e0;
-}
-
-/* Ajustes de botones */
-.btn-primary {
-  background-color: #0d6efd;
-  border: none;
-  font-size: 0.9rem;
 }
 
 .btn-outline-light {

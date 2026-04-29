@@ -7,13 +7,13 @@
     </div>
     
     <nav class="nav header-nav">
-      <a class="nav-link nav-link-active fw-bold text-primary px-3" href="#">Users</a>
-      <a class="nav-link text-secondary fw-medium px-3" href="#">Repositories</a>
+      <a class="nav-link px-3" routerLink="/users" routerLinkActive="nav-link-active fw-bold text-primary">Users</a>
+      <a class="nav-link px-3" routerLink="/repositories" routerLinkActive="nav-link-active fw-bold text-primary text-secondary">Repositories</a>
     </nav>
   </header>
 
   <main class="main-content bg-light">
-    <app-user-list></app-user-list>
+    <router-outlet></router-outlet>
   </main>
 
   <footer class="main-footer border-top py-4">
