@@ -1,30 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UserListComponent } from './user-list.component';
+import { RepositoryListComponent } from './repository-list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CommonModule } from '@angular/common';
 
-describe('UserListComponent', () => {
-  let component: UserListComponent;
-  let fixture: ComponentFixture<UserListComponent>;
+describe('RepositoryListComponent', () => {
+  let component: RepositoryListComponent;
+  let fixture: ComponentFixture<RepositoryListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserListComponent],
+      declarations: [RepositoryListComponent],
       imports: [CommonModule, HttpClientTestingModule, RouterTestingModule],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UserListComponent);
+    fixture = TestBed.createComponent(RepositoryListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  test('Debe crear el componente de lista de usuarios', () => {
+  test('Debe crear el componente de lista de repositorios', () => {
     expect(component).toBeTruthy();
   });
 
-  test('Debe renderizar el título "Users"', () => {
+  test('Debe mostrar el label de "Total Repositories"', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Users');
+    expect(compiled.textContent).toContain('Total Repositories');
   });
 });
