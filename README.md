@@ -1,4 +1,4 @@
-# ParcialMISW4104
+# ParcialMISW4104 - Juan Sebastián Chimbaco Bonilla
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
 
