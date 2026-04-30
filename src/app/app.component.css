@@ -1,0 +1,8 @@
+.navbar-brand a {
+  color: inherit; /* Mantiene el color negro/oscuro original */
+  transition: opacity 0.2s;
+}
+
+.navbar-brand a:hover {
+  opacity: 0.7; /* Da un feedback visual al pasar el mouse */
+}
