@@ -1,0 +1,55 @@
+<div class="repo-page-container p-5 bg-white">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h1 class="fw-bold display-6 mb-1 text-dark">Repositories</h1>
+    </div>
+
+  </div>
+
+  <div class="card border border-light-subtle rounded-3 shadow-sm mb-5 p-4 w-100" style="border-left: 5px solid #0d6efd !important;">
+    <div class="d-flex align-items-center">
+        <div class="pe-4 ">
+            <small class="text-muted d-block text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Repositories</small>
+            <h2 class="fw-bold text-primary mb-0 display-5">{{ repositories.length }}</h2>
+        </div>
+        </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6" *ngFor="let r of repositories">
+      <div class="card h-100 border border-light-subtle rounded-3 shadow-sm repo-card" [routerLink]="['/repositories', r.id]" style="cursor: pointer;">
+        <div class="card-body p-4">
+          
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-journal-code text-primary fs-4"></i>
+            <h5 class="fw-bold text-primary mb-0">{{ r.name }}</h5>
+          </div>
+
+          <p class="text-secondary small mb-4 line-clamp" style="min-height: 40px;">
+            {{ r.description }}
+          </p>
+
+          <hr class="border-light-subtle my-3">
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+              <div class="d-flex align-items-center small">
+                <span class="dot me-2" [ngClass]="getLanguageClass(r.language)"></span>
+                <span class="text-secondary">{{ r.language }}</span>
+              </div>
+              
+              <div class="d-flex align-items-center small text-secondary">
+                <i class="bi bi-star-fill text-warning me-1" style="font-size: 0.85rem;"></i>
+                <span class="fw-medium">{{ r.stars }}</span>
+              </div>
+            </div>
+
+            <div class="small text-muted">
+              {{ r.createdAt | date:'MMM dd, yyyy' }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

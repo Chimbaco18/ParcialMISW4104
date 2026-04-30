@@ -2,7 +2,7 @@ import {ApplicationConfig,provideBrowserGlobalErrorListeners,importProvidersFrom
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
-import { UserModule } from './user/users-module'; 
+import { UserModule } from './user/users.module'; 
 
 export const appConfig: ApplicationConfig = {
   providers: [

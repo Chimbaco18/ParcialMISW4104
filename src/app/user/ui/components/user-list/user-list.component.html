@@ -2,7 +2,7 @@
   <aside class="sidebar border-end bg-white">
     <div class="p-4 border-bottom">
       <h1 class="fw-bold h2 mb-1">Users</h1>
-      <p class="text-muted small mb-0">{{ users.length }} members in development team</p>
+      <p class="text-muted small mb-0">{{ users.length }} members</p>
     </div>
     
     <div class="user-list-scroll">
@@ -36,7 +36,6 @@
           
           <div class="ms-4 flex-grow-1 mt-2">
             <h1 class="fw-bold mb-1">{{ selectedUser.name }}</h1>
-            <p class="text-muted fs-5 mb-3">Full-stack Developer @ Core Services</p>
             
             <div class="d-flex flex-wrap gap-2 mt-3">
               <span class="badge-pill"><i class="bi bi-geo-alt me-2"></i>{{ selectedUser.location }}</span>
@@ -45,14 +44,7 @@
             </div>
           </div>
 
-          <div class="d-flex gap-2">
-            <button class="btn btn-primary px-4 fw-bold rounded-3">
-              <i class="bi bi-pencil-fill me-2 small"></i> Edit Profile
-            </button>
-            <button class="btn btn-outline-light border text-dark rounded-3 px-3">
-              <i class="bi bi-three-dots"></i>
-            </button>
-          </div>
+          
         </div>
       </div>
 
@@ -66,25 +58,12 @@
             <div class="card-body p-4 pt-0">
               <div class="row pt-3 border-top mb-4">
                 <div class="col-6">
-                  <small class="text-muted d-block mb-1 text-uppercase">Internal ID</small>
+                  <small class="text-muted d-block mb-1 text-uppercase">ID</small>
                   <span class="fw-bold fs-5">#{{ selectedUser.id }}</span>
                 </div>
                 <div class="col-6">
                   <small class="text-muted d-block mb-1 text-uppercase">Username</small>
                   <span class="fw-bold fs-5">{{ selectedUser.username }}</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <small class="text-muted d-block mb-1 text-uppercase">Access Level</small>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-shield-lock-fill text-primary me-2 fs-5"></i>
-                    <span class="fw-bold text-primary fs-5">Standard Developer</span>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <small class="text-muted d-block mb-1 text-uppercase">Last Activity</small>
-                  <span class="fw-bold fs-5">2 hours ago</span>
                 </div>
               </div>
             </div>
@@ -132,8 +111,7 @@
     <ng-template #noSelection>
       <div class="h-100 d-flex flex-column align-items-center justify-content-center opacity-50">
         <i class="bi bi-people display-1 mb-3 text-muted"></i>
-        <h3>Select a user to view profile</h3>
-        <p>Choose a team member from the list to see their details.</p>
+        <h3>Select or choose a user from the list to view their profile details.</h3>
       </div>
     </ng-template>
   </section>
